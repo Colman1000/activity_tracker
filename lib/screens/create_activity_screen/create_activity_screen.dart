@@ -129,6 +129,9 @@ class CreateActivityScreen extends StatelessWidget {
               ),
               child: Obx(
                 () => TextButton(
+                  style: TextButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 26, vertical: 24)),
                   onPressed: () => controller.createActivity(context),
                   child: controller.isSubmittingActivity()
                       ? const Align(child: CupertinoActivityIndicator())
@@ -136,6 +139,7 @@ class CreateActivityScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 24),
           ],
         ),
       ),

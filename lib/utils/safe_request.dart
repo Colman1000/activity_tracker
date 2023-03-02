@@ -34,7 +34,7 @@ class SafeRequest {
     } on PlatformException catch (e) {
       errorHandler(AppException.fromPlatformException(e));
     } catch (e) {
-      errorHandler(const AppException());
+      errorHandler(const AppException('Something went wrong'));
     } finally {
       onFinally?.call();
     }

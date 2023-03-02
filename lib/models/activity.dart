@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 class Activity {
   final String key;
   final String type;
-  final double price;
   final String activity;
-  final int? participants;
+  final int participants;
+  final double price;
   final double accessibility;
 
   Activity({
     required this.key,
     required this.activity,
     required this.type,
-    required double price,
-    required double accessibility,
-    this.participants,
+    double price = 0,
+    double accessibility = 0,
+    this.participants = 1,
   })  : price = price.clamp(0, 1),
         accessibility = accessibility.clamp(0, 1);
 
@@ -24,7 +24,7 @@ class Activity {
       key: (json['key'] ?? '').toString(),
       activity: (json['activity'] ?? '').toString(),
       type: (json['type'] ?? '').toString(),
-      participants: int.tryParse(json['participants'].toString()),
+      participants: int.tryParse(json['participants'].toString()) ?? 1,
       accessibility: double.tryParse(json['accessibility'].toString()) ?? 0,
       price: double.tryParse(json['price'].toString()) ?? 0,
     );
@@ -59,7 +59,7 @@ class Activity {
       );
 
   static IconData getIconFromString(String icon) =>
-      iconsMap[icon] ?? Icons.priority_high_outlined;
+      iconsMap[icon.toLowerCase()] ?? Icons.priority_high_outlined;
 
   IconData get icon => getIconFromString(type);
 

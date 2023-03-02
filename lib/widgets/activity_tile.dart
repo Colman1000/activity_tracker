@@ -20,7 +20,7 @@ class ActivityTile extends StatelessWidget {
       enableFeedback: true,
       key: ValueKey(activity.key),
       subtitle: Text(
-        '${activity.type.toUpperCase()}  •  ${activity.participants} participant${(activity.participants ?? 0) > 2 ? 's' : ''}',
+        '${activity.type.toUpperCase()}  •  ${activity.participants} participant${activity.participants > 2 ? 's' : ''}',
         style: const TextStyle(
           color: AppColors.grey7,
           fontSize: 10,

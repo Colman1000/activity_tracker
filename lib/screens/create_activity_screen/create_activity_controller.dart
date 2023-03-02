@@ -10,10 +10,10 @@ import 'package:go_router/go_router.dart';
 
 class CreateActivityController extends GetxController {
   final type = ''.obs;
-  final price = ''.obs;
   final activity = ''.obs;
-  final participants = ''.obs;
-  final accessibility = ''.obs;
+  final price = '0'.obs;
+  final participants = '1'.obs;
+  final accessibility = '0'.obs;
 
   final isSubmittingActivity = false.obs;
 
