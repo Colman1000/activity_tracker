@@ -1,0 +1,28 @@
+name: activity_tracker
+description: Elastic Team Flutter Coding Challenge - Activity Tracker App. This challenge is designed to assess a participant's ability to build a user-friendly activity tracker app using Flutter.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  get: ^4.6.5
+  go_router: ^6.0.9
+  dio: ^5.0.0
+  http: ^0.13.5
+  implicitly_animated_list: ^2.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  go_router_builder: any
+  build_runner: any
+  build_verify: any
+
+flutter:
+  uses-material-design: true
